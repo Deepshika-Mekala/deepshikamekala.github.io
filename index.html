@@ -2,154 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deepshika Mekala | Portfolio</title>
   <style>
-    :root {
-      --accent: #ffb6c1;
-      --accent-dark: #c48fa0;
-      --bg: #f9f9f9;
-      --text: #333;
+    :root{
+      --accent:#ffb6c1;      /* baby pink */
+      --accent-dark:#c48fa0; /* rose */
+      --text:#333;
+      --bg:#f9f9f9;
+      --card:#ffffff;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    /* Slide container */
+    body{
+      scroll-snap-type:y mandatory;
+      overflow-y:scroll;
+      scroll-behavior:smooth;
     }
-
-    body, html {
-      height: 100%;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
+    .slide{
+      height:100vh;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:2rem 1.25rem;
+      scroll-snap-align:start;
+      text-align:center;
     }
-
-    section {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      scroll-snap-align: start;
-      text-align: center;
-      padding: 2rem;
-      color: var(--text);
+    /* Slides */
+    .s1{
+      color:#fff;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
     }
-
-    header {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: white;
+    .s1 .title{font-size:2.4rem;font-weight:700;letter-spacing:.3px}
+    .s1 .subtitle{margin-top:.75rem;font-size:1.15rem;opacity:.95}
+    .arrow{
+      position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+      font-size:1.5rem;opacity:.9;animation:bounce 2s infinite
     }
+    @keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
-    .slide1 {
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #fff;
+    .s2,.s3,.s4{background:var(--card)}
+    .section-title{
+      font-size:1.9rem;margin-bottom:1rem;color:var(--accent-dark);
+      border-left:6px solid var(--accent);padding-left:.6rem
     }
-
-    .slide2 { background: #fff; }
-    .slide3 { background: #f4f4f4; }
-    .slide4 {
-      background: linear-gradient(135deg, #fef1f4, #ffe4ec);
-    }
-
-    h2 {
-      color: var(--accent-dark);
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      max-width: 800px;
-      line-height: 1.6;
-      font-size: 1.1rem;
-    }
-
-    .project {
-      margin: 1.2rem 0;
-    }
-
-    a {
-      color: var(--accent-dark);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      color: var(--accent);
-    }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    .arrow {
-      position: absolute;
-      bottom: 20px;
-      font-size: 2rem;
-      color: #fff;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
+    .text{max-width:900px;line-height:1.65;font-size:1.06rem;margin:0 auto}
+    .projects{max-width:900px;margin-top:.5rem}
+    .project{padding:1rem 1.1rem;border:1px solid #eee;border-radius:12px;margin:12px 0;text-align:left;box-shadow:0 4px 12px rgba(0,0,0,.04)}
+    .project h3{margin-bottom:.35rem;color:var(--accent-dark);font-size:1.1rem}
+    .project p{margin:.25rem 0 .5rem;line-height:1.6}
+    a{color:var(--accent-dark);text-decoration:none}
+    a:hover{text-decoration:underline}
+    ul.clean{list-style:none;margin-top:.25rem}
+    ul.clean li{padding:.4rem 0}
+    .contact-links{margin-top:.6rem}
+    .contact-links a{margin:0 .35rem}
+    .footer{position:absolute;bottom:14px;font-size:.9rem;color:#666}
+    /* Mobile */
+    @media (max-width:600px){
+      .s1 .title{font-size:2rem}
+      .section-title{font-size:1.6rem}
     }
   </style>
 </head>
 <body>
-  <section class="slide1" id="about">
-    <header>Deepshika Mekala</header>
-    <p style="margin-top:1rem; font-size:1.2rem;">SAP Developer · AI & Cloud Enthusiast · Data Automation</p>
-    <p style="max-width:700px; margin-top:2rem;">
-      Associate SAP Developer at IBM Canada with expertise in <b>SAP S/4HANA</b>, <b>Azure AI</b>, and <b>automation workflows</b>.
-      Passionate about connecting enterprise systems with modern AI and analytics.
+
+  <!-- Slide 1: Cover -->
+  <div class="slide s1" id="about">
+    <div class="title">Deepshika Mekala</div>
+    <div class="subtitle">SAP Developer · AI & Cloud · Data Automation</div>
+    <p class="text" style="margin-top:1.2rem;max-width:760px;">
+      Associate SAP Developer at IBM Canada working across <b>SAP S/4HANA</b>, <b>Azure AI</b>,
+      and automation. I like building clean, practical solutions that connect enterprise systems
+      with AI and analytics.
     </p>
     <div class="arrow">↓</div>
-  </section>
+  </div>
 
-  <section class="slide2" id="projects">
-    <h2>Featured Projects</h2>
-    <div class="project">
-      <h3>🧠 SAP AI Copilot</h3>
-      <p>Built a Python + LangChain assistant that answers SAP workflow questions using RAG and vector search.</p>
-      <a href="https://github.com/deepshikamekala/SAP-AI-Copilot" target="_blank">View Project →</a>
+  <!-- Slide 2: Projects -->
+  <div class="slide s2" id="projects">
+    <div class="section-title">Featured Projects</div>
+    <div class="projects">
+      <div class="project">
+        <h3>🧠 SAP AI Copilot</h3>
+        <p>Python + LangChain + vector search (RAG) answering SAP workflow questions from curated docs.</p>
+        <a href="https://github.com/deepshikamekala/SAP-AI-Copilot" target="_blank" rel="noopener">View Project →</a>
+      </div>
+      <div class="project">
+        <h3>☁️ Azure Data Pipeline Automation</h3>
+        <p>ETL with Python/Pandas to ingest, clean, and export datasets (local/Blob) for downstream reporting.</p>
+        <a href="https://github.com/deepshikamekala/Azure-ETL" target="_blank" rel="noopener">View Project →</a>
+      </div>
+      <div class="project">
+        <h3>📊 Power BI Retail Dashboard</h3>
+        <p>Interactive KPIs for orders, deliveries, and sales with clean visuals and drill-through pages.</p>
+        <a href="https://github.com/deepshikamekala/PowerBI-Dashboard" target="_blank" rel="noopener">View Project →</a>
+      </div>
     </div>
-    <div class="project">
-      <h3>☁️ Azure Data Pipeline Automation</h3>
-      <p>Developed an ETL pipeline using Python and Azure Blob for automated data flows and reporting.</p>
-      <a href="https://github.com/deepshikamekala/Azure-ETL" target="_blank">View Project →</a>
-    </div>
-    <div class="project">
-      <h3>📊 Power BI Retail Dashboard</h3>
-      <p>Interactive Power BI dashboard visualizing sales and logistics KPIs.</p>
-      <a href="https://github.com/deepshikamekala/PowerBI-Dashboard" target="_blank">View Project →</a>
-    </div>
-  </section>
+  </div>
 
-  <section class="slide3" id="certifications">
-    <h2>Certifications</h2>
-    <ul style="list-style:none; line-height:1.8;">
-      <li>🌐 SAP Certified: Extended Warehouse Management (EWM)</li>
-      <li>🤖 SAP Certified: Generative AI Development</li>
-      <li>☁️ Microsoft Azure Data & AI Fundamentals</li>
-      <li>🧩 AWS Cloud Practitioner Essentials</li>
-      <li>💡 IBM Enterprise Design Thinking Practitioner</li>
-    </ul>
-  </section>
-
-  <section class="slide4" id="contact">
-    <h2>Let’s Connect</h2>
-    <p>📧 <a href="mailto:deepshikashalini@gmail.com">deepshikashalini@gmail.com</a></p>
-    <p>🔗 
-      <a href="https://linkedin.com/in/deepshikamekala" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/deepshikamekala" target="_blank">GitHub</a>
-    </p>
-    <footer>© 2025 Deepshika Mekala · Built with 💖 using GitHub Pages</footer>
-  </section>
-</body>
-</html>
+  <!-- Slide 3: Certifications -->
+  <div class="slide s3" id="certifications">
+    <div class="section-title">Certifications</div>
+    <ul class="clean text" style="max-width:680px;">
+      <
