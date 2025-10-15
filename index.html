@@ -100,93 +100,70 @@
       50% { transform: translate(-50%, 10px); }
     }
 
-    /* ---------- SLIDE 2 (RIGHT SIDE) ---------- */
+    /* ---------- SLIDE 2 (TEXT INSIDE BUBBLE) ---------- */
     .slide-about {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding: 4rem 8%;
+      padding: 2rem 5%;
       position: relative;
     }
 
-    .about-content {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 3rem;
-      z-index: 2;
-    }
-
     .about-blob {
-      width: 380px;
-      height: 380px;
-      background-color: #ebd9ca;
-      border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+      position: relative;
+      width: 600px;
+      height: 600px;
+      background-color: #f9e8db;
+      border-radius: 50%;
       box-shadow: 12px 12px 0 #b9927e;
-      z-index: 1;
-      flex-shrink: 0;
-    }
-
-    .about-text {
-      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem;
       color: #3b1d14;
       font-family: "Poppins", sans-serif;
-      text-align: right;
       z-index: 2;
     }
 
-    .about-text h2 {
+    .about-blob h2 {
       font-family: "Luckiest Guy", cursive;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: #a55b47;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
 
-    .about-text h1 {
+    .about-blob h1 {
       font-family: "Luckiest Guy", cursive;
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #3b1d14;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
-    .about-text p {
-      font-size: 1.1rem;
+    .about-blob p {
+      font-size: 1.05rem;
       line-height: 1.7;
+      max-width: 80%;
     }
 
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 900px) {
-      .text-wrapper h1 { font-size: 2.4rem; }
-      .text-wrapper h2 { font-size: 1.4rem; }
-      .center-blob { width: 400px; height: 300px; }
-
-      .slide-about {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-      }
-
-      .about-content {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-      }
-
       .about-blob {
-        width: 280px;
-        height: 280px;
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+        border-radius: 40%;
       }
 
-      .about-text {
-        text-align: center;
-        max-width: 90%;
+      .about-blob h1 {
+        font-size: 2rem;
       }
 
-      .about-text h1 { font-size: 2.3rem; }
-      .about-text h2 { font-size: 1.3rem; }
-      .about-text p { font-size: 1rem; }
+      .about-blob p {
+        font-size: 1rem;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -204,18 +181,16 @@
 
   <!-- SLIDE 2 -->
   <section class="slide-about checkerboard" id="about">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>Hi, I’m</h2>
-        <h1>Deepshika Mekala</h1>
-        <p>
-          A curious mind with a love for blending tech and creativity! I dive into AI, cloud,
-          and SAP systems to build smart, intuitive solutions that actually make life easier.
-          Whether it’s automating workflows, optimizing data, or experimenting with new ideas,
-          I’m all about turning imagination into impact.
-        </p>
-      </div>
-      <div class="about-blob"></div>
+    <div class="about-blob">
+      <h2>Hi, I’m</h2>
+      <h1>Deepshika Mekala</h1>
+      <p>
+        A curious mind with a love for blending tech and creativity!  
+        I dive into AI, cloud, and SAP systems to build smart, intuitive  
+        solutions that make life easier. Whether it’s automating workflows,  
+        optimizing data, or experimenting with new ideas — I’m all about  
+        turning imagination into impact.
+      </p>
     </div>
   </section>
 
