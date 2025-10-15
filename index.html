@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepshika Mekala | All About Me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepshika Mekala | All About Me</title>
 
-<!-- Sunny retro font -->
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <!-- Sunny playful font -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 
-<style>
-  * {margin:0; padding:0; box-sizing:border-box;}
-  html, body {
-    height:100%;
-    background-color:#E9DCD2;
-    font-family:'Luckiest Guy', cursive;
-    overflow:hidden;
-  }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* Checkerboard background */
-  body {
-    background-image:
-      linear-gradient(45deg, #C19A86 25%, transparent 25%),
-      linear-gradient(-45deg, #C19A86 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, #C19A86 75%),
-      linear-gradient(-45deg, transparent 75%, #C19A86 75%);
-    background-size:120px 120px;
-    background-position:0 0, 0 60px, 60px -60px, -60px 0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+    body {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Luckiest Guy', cursive;
+      background-color: #E9DCD2;
+      overflow: hidden;
 
-  /* Center beige blob */
-  .center-blob {
-    position:absolute;
-    width:600px;
-    height:420px;
-    background-color:#EBD9CA;
-    border-radius:55% 45% 60% 40% / 55% 40% 60% 45%;
-    box-shadow:10px 10px 0 #B9927E;
-    z-index:1;
-  }
+      /* Checkerboard background */
+      background-image:
+        linear-gradient(45deg, #C19A86 25%, transparent 25%),
+        linear-gradient(-45deg, #C19A86 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #C19A86 75%),
+        linear-gradient(-45deg, transparent 75%, #C19A86 75%);
+      background-size: 120px 120px;
+      background-position: 0 0, 0 60px, 60px -60px, -60px 0;
+    }
 
-  /* Text styling */
-  .text-wrapper {
-    position:relative;
-    text-align:center;
-    color:#3B1D14;
-    z-index:2;
-    text-transform:uppercase;
-  }
+    /* Blob shape in the center */
+    .center-blob {
+      position: absolute;
+      width: 600px;
+      height: 420px;
+      background-color: #EBD9CA;
+      border-radius: 55% 45% 60% 40% / 55% 40% 60% 45%;
+      box-shadow: 10px 10px 0 #B9927E;
+      z-index: 1;
+    }
 
-  h1 {
-    font-size:3.8rem;
-    text-shadow:3px 3px 0 #B9927E;
-    letter-spacing:2px;
-  }
+    /* Text overlay */
+    .text-wrapper {
+      position: relative;
+      text-align: center;
+      color: #3B1D14;
+      z-index: 2;
+      text-transform: uppercase;
+    }
 
-  h2 {
-    font-size:2.1rem;
-    margin-top:1rem;
-    letter-spacing:1px;
-    text-shadow:2px 2px 0 #B9927E;
-  }
+    h1 {
+      font-size: 3.8rem;
+      text-shadow: 3px 3px 0 #B9927E;
+      letter-spacing: 2px;
+    }
 
-  /* Responsive tweaks */
-  @media (max-width:700px) {
-    h1 {font-size:2.5rem;}
-    h2 {font-size:1.4rem;}
-    .center-blob {width:400px; height:300px;}
-  }
-</style>
+    h2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 0 #B9927E;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .center-blob {
+        width: 400px;
+        height: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="center-blob"></div>
+  <div class="center-blob"></div>
 
-<div class="text-wrapper">
-  <h1>Deepshika Mekala</h1>
-  <h2>All About Me</h2>
-</div>
+  <div class="text-wrapper">
+    <h1>Deepshika Mekala</h1>
+    <h2>All About Me</h2>
+  </div>
 
 </body>
 </html>
+
