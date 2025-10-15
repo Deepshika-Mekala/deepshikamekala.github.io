@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deepshika Mekala | All About Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepshika Mekala | Portfolio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
     * {
@@ -20,12 +20,12 @@
     }
 
     body {
-      font-family: 'Luckiest Guy', cursive;
-      background-color: #E9DCD2;
+      font-family: "Luckiest Guy", cursive;
+      background-color: #e9dcd2;
       overflow-x: hidden;
     }
 
-    /* ---------- COMMON STYLES ---------- */
+    /* ---------- COMMON ---------- */
     section {
       min-height: 100vh;
       width: 100%;
@@ -33,20 +33,18 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      text-align: center;
-      padding: 2rem;
       overflow: hidden;
     }
 
     .checkerboard {
-      background-image:
-        linear-gradient(45deg, #C19A86 25%, transparent 25%),
-        linear-gradient(-45deg, #C19A86 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #C19A86 75%),
-        linear-gradient(-45deg, transparent 75%, #C19A86 75%);
+      background-image: 
+        linear-gradient(45deg, #c19a86 25%, transparent 25%),
+        linear-gradient(-45deg, #c19a86 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #c19a86 75%),
+        linear-gradient(-45deg, transparent 75%, #c19a86 75%);
       background-size: 120px 120px;
       background-position: 0 0, 0 60px, 60px -60px, -60px 0;
-      background-color: #E9DCD2;
+      background-color: #e9dcd2;
     }
 
     /* ---------- SLIDE 1 ---------- */
@@ -54,22 +52,23 @@
       position: absolute;
       width: 600px;
       height: 420px;
-      background-color: #EBD9CA;
+      background-color: #ebd9ca;
       border-radius: 55% 45% 60% 40% / 55% 40% 60% 45%;
-      box-shadow: 10px 10px 0 #B9927E;
+      box-shadow: 10px 10px 0 #b9927e;
       z-index: 1;
     }
 
     .text-wrapper {
       position: relative;
       z-index: 2;
-      color: #3B1D14;
+      text-align: center;
+      color: #3b1d14;
       text-transform: uppercase;
     }
 
     .text-wrapper h1 {
       font-size: 3.8rem;
-      text-shadow: 3px 3px 0 #B9927E;
+      text-shadow: 3px 3px 0 #b9927e;
       letter-spacing: 2px;
     }
 
@@ -77,56 +76,16 @@
       font-size: 2rem;
       margin-top: 1rem;
       letter-spacing: 1px;
-      text-shadow: 2px 2px 0 #B9927E;
+      text-shadow: 2px 2px 0 #b9927e;
     }
 
-    /* ---------- SLIDE 2 ---------- */
-    .slide-about .about-blob {
-      position: absolute;
-      width: 70%;
-      height: 80%;
-      background-color: #EBD9CA;
-      border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
-      box-shadow: 12px 12px 0 #B9927E;
-      z-index: 1;
-    }
-
-    .about-text {
-      z-index: 2;
-      max-width: 700px;
-      color: #3B1D14;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .about-text h2 {
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 1.8rem;
-      color: #A55B47;
-      margin-bottom: 0.4rem;
-    }
-
-    .about-text h1 {
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 3rem;
-      color: #3B1D14;
-      margin-bottom: 1.2rem;
-    }
-
-    .about-text p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    /* ---------- SCROLL ARROW ---------- */
     .scroll-arrow {
       position: absolute;
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
-      color: #3B1D14;
+      color: #3b1d14;
       text-decoration: none;
       animation: bounce 1.5s infinite;
       z-index: 3;
@@ -137,11 +96,95 @@
       50% { transform: translate(-50%, 10px); }
     }
 
+    /* ---------- SLIDE 2 (SIDE LAYOUT) ---------- */
+    .slide-about {
+      justify-content: flex-start;
+      padding: 4rem 8%;
+    }
+
+    .about-blob {
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45%;
+      height: 70%;
+      background-color: #ebd9ca;
+      border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+      box-shadow: 12px 12px 0 #b9927e;
+      z-index: 1;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .about-text {
+      flex: 1;
+      margin-left: auto;
+      max-width: 500px;
+      color: #3b1d14;
+      font-family: "Poppins", sans-serif;
+      text-align: left;
+      z-index: 2;
+    }
+
+    .about-text h2 {
+      font-family: "Luckiest Guy", cursive;
+      font-size: 1.8rem;
+      color: #a55b47;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-text h1 {
+      font-family: "Luckiest Guy", cursive;
+      font-size: 3rem;
+      color: #3b1d14;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
     /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       .text-wrapper h1 { font-size: 2.4rem; }
       .text-wrapper h2 { font-size: 1.4rem; }
       .slide-intro .center-blob { width: 400px; height: 300px; }
+
+      .slide-about {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .about-blob {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 80%;
+        height: 40%;
+        margin-bottom: 2rem;
+      }
+
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: center;
+        margin-left: 0;
+        max-width: 90%;
+      }
+
       .about-text h1 { font-size: 2.3rem; }
       .about-text h2 { font-size: 1.3rem; }
       .about-text p { font-size: 1rem; }
@@ -163,15 +206,17 @@
   <!-- SLIDE 2 -->
   <section class="slide-about checkerboard" id="about">
     <div class="about-blob"></div>
-    <div class="about-text">
-      <h2>Hi, I’m</h2>
-      <h1>Deepshika Mekala</h1>
-      <p>
-        A curious mind with a love for blending tech and creativity! I dive into AI, cloud,
-        and SAP systems to build smart, intuitive solutions that actually make life easier.
-        Whether it’s automating workflows, optimizing data, or experimenting with new ideas,
-        I’m all about turning imagination into impact.
-      </p>
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Hi, I’m</h2>
+        <h1>Deepshika Mekala</h1>
+        <p>
+          A curious mind with a love for blending tech and creativity! I dive into AI, cloud,
+          and SAP systems to build smart, intuitive solutions that actually make life easier.
+          Whether it’s automating workflows, optimizing data, or experimenting with new ideas,
+          I’m all about turning imagination into impact.
+        </p>
+      </div>
     </div>
   </section>
 
