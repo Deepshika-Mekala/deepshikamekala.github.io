@@ -1,258 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deepshika Mekala | Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deepshika Mekala | Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { font-family:'Luckiest Guy', cursive; background:#E9DCD2; overflow-x:hidden; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Luckiest Guy',cursive;background:#E9DCD2;overflow-x:hidden;}
+section{min-height:100vh;width:100%;position:relative;overflow:hidden;}
 
-    section {
-      min-height:100vh;
-      width:100%;
-      position:relative;
-      overflow:hidden;
-    }
+.checkerboard{
+ background-image:
+  linear-gradient(45deg,#C19A86 25%,transparent 25%),
+  linear-gradient(-45deg,#C19A86 25%,transparent 25%),
+  linear-gradient(45deg,transparent 75%,#C19A86 75%),
+  linear-gradient(-45deg,transparent 75%,#C19A86 75%);
+ background-size:120px 120px;
+ background-position:0 0,0 60px,60px -60px,-60px 0;
+ background-color:#E9DCD2;
+}
 
-    .checkerboard {
-      background-image:
-        linear-gradient(45deg,#C19A86 25%,transparent 25%),
-        linear-gradient(-45deg,#C19A86 25%,transparent 25%),
-        linear-gradient(45deg,transparent 75%,#C19A86 75%),
-        linear-gradient(-45deg,transparent 75%,#C19A86 75%);
-      background-size:120px 120px;
-      background-position:0 0,0 60px,60px -60px,-60px 0;
-      background-color:#E9DCD2;
-    }
+/* ---------- SLIDE 1 ---------- */
+.slide-intro{
+ display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+}
+.center-blob{
+ position:absolute;width:600px;height:420px;background:#EBD9CA;
+ border-radius:55% 45% 60% 40% / 55% 40% 60% 45%;
+ box-shadow:10px 10px 0 #B9927E;z-index:1;
+}
+.text-wrapper{position:relative;z-index:2;color:#3B1D14;text-transform:uppercase;}
+.text-wrapper h1{font-size:3.8rem;text-shadow:3px 3px 0 #B9927E;letter-spacing:2px;}
+.text-wrapper h2{font-size:2rem;margin-top:1rem;text-shadow:2px 2px 0 #B9927E;}
+.scroll-arrow{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+ font-size:2rem;color:#3B1D14;text-decoration:none;animation:bounce 1.5s infinite;z-index:3;}
+@keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
 
-    /* Slide 1 */
-    .slide-intro {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
-    .center-blob {
-      position:absolute;
-      width:600px;
-      height:420px;
-      background:#EBD9CA;
-      border-radius:55% 45% 60% 40% / 55% 40% 60% 45%;
-      box-shadow:10px 10px 0 #B9927E;
-      z-index:1;
-    }
-    .text-wrapper {
-      position:relative;
-      z-index:2;
-      color:#3B1D14;
-      text-transform:uppercase;
-    }
-    .text-wrapper h1 {
-      font-size:3.8rem;
-      text-shadow:3px 3px 0 #B9927E;
-      letter-spacing:2px;
-    }
-    .text-wrapper h2 {
-      font-size:2rem;
-      margin-top:1rem;
-      text-shadow:2px 2px 0 #B9927E;
-      letter-spacing:1px;
-    }
-    .scroll-arrow {
-      position:absolute;
-      bottom:30px;
-      left:50%;
-      transform:translateX(-50%);
-      font-size:2rem;
-      color:#3B1D14;
-      text-decoration:none;
-      animation:bounce 1.5s infinite;
-      z-index:3;
-    }
-    @keyframes bounce {0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+/* ---------- SLIDE 2 (About Me Right) ---------- */
+.slide-about{display:flex;align-items:center;justify-content:space-between;padding:4rem 6%;}
+.about-text{flex:1;font-family:'Poppins',sans-serif;color:#3B1D14;max-width:45%;z-index:2;}
+.about-text h2{font-family:'Luckiest Guy',cursive;font-size:1.8rem;color:#A55B47;margin-bottom:.4rem;}
+.about-text h1{font-family:'Luckiest Guy',cursive;font-size:2.8rem;margin-bottom:1rem;}
+.about-text p{font-size:1.05rem;line-height:1.7;}
+.about-blob{flex:1;width:520px;height:520px;background:#F9E8DB;border-radius:50%;
+ box-shadow:12px 12px 0 #B9927E;display:flex;align-items:center;justify-content:center;
+ padding:3rem;margin-left:3rem;z-index:1;}
 
-    /* Slide 2 – About Me (bubble on right) */
-    .slide-about {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:4rem 6%;
-      position:relative;
-    }
+/* ---------- SHARED STYLE (Blob Center Slides 3–4) ---------- */
+.center-slide{display:flex;align-items:center;justify-content:center;flex-direction:column;
+ text-align:center;padding:4rem 2rem;}
+.center-blob-wrap{
+ position:absolute;width:850px;height:650px;background:#F9E8DB;
+ border-radius:55% 45% 60% 40% / 55% 40% 60% 45%;
+ box-shadow:12px 12px 0 #B9927E;z-index:1;
+}
+.center-content{position:relative;z-index:2;font-family:'Poppins',sans-serif;color:#3B1D14;max-width:900px;}
+.center-content h1{font-family:'Luckiest Guy',cursive;color:#A55B47;font-size:2.5rem;
+ margin-bottom:2rem;text-shadow:2px 2px 0 #B9927E;letter-spacing:2px;}
+.center-content p{font-size:1.1rem;line-height:2;margin-bottom:1rem;text-transform:uppercase;font-weight:500;}
 
-    .about-text {
-      flex:1;
-      font-family:'Poppins', sans-serif;
-      color:#3B1D14;
-      max-width:45%;
-      z-index:2;
-    }
-    .about-text h2 {
-      font-family:'Luckiest Guy', cursive;
-      font-size:1.8rem;
-      color:#A55B47;
-      margin-bottom:.4rem;
-    }
-    .about-text h1 {
-      font-family:'Luckiest Guy', cursive;
-      font-size:2.8rem;
-      margin-bottom:1rem;
-    }
-    .about-text p {
-      font-size:1.05rem;
-      line-height:1.7;
-    }
-
-    .about-blob {
-      flex:1;
-      width:520px;
-      height:520px;
-      background:#F9E8DB;
-      border-radius:50%;
-      box-shadow:12px 12px 0 #B9927E;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:3rem;
-      margin-left:3rem;
-      z-index:1;
-    }
-
-    /* Slide 3 – Education */
-    .slide-edu {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      padding:4rem 2rem;
-      text-align:center;
-    }
-    .edu-title {
-      font-family:'Luckiest Guy', cursive;
-      color:#A55B47;
-      font-size:2.5rem;
-      letter-spacing:2px;
-      margin-bottom:3rem;
-      text-shadow:2px 2px 0 #B9927E;
-    }
-    .edu-content {
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:4rem;
-      width:100%;
-    }
-    .edu-card {
-      width:420px;
-      height:420px;
-      background:#F9E8DB;
-      border-radius:50%;
-      box-shadow:10px 10px 0 #B9927E;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
-      color:#3B1D14;
-      font-family:'Poppins', sans-serif;
-      text-align:center;
-    }
-    .edu-card h3 {
-      font-family:'Luckiest Guy', cursive;
-      font-size:1.7rem;
-      color:#A55B47;
-      margin-bottom:1rem;
-    }
-    .edu-card p {
-      font-size:1rem;
-      line-height:1.6;
-    }
-
-    /* Responsive */
-    @media(max-width:900px){
-      .slide-about {
-        flex-direction:column;
-        text-align:center;
-      }
-      .about-text {
-        max-width:90%;
-        margin-bottom:2rem;
-      }
-      .about-blob {
-        margin:0 auto;
-        width:80vw;
-        height:auto;
-        border-radius:40%;
-        padding:2rem;
-      }
-      .edu-content {
-        flex-direction:column;
-        gap:2rem;
-      }
-      .edu-card {
-        width:80vw;
-        height:auto;
-        border-radius:40%;
-        padding:2rem;
-      }
-    }
-  </style>
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+ .slide-about{flex-direction:column;text-align:center;}
+ .about-text{max-width:90%;margin-bottom:2rem;}
+ .about-blob{margin:0 auto;width:80vw;height:auto;border-radius:40%;padding:2rem;}
+ .center-blob-wrap{width:90%;height:90%;}
+ .center-content p{font-size:.9rem;line-height:1.6;}
+}
+</style>
 </head>
 <body>
 
-  <!-- Slide 1 -->
-  <section class="slide-intro checkerboard" id="intro">
-    <div class="center-blob"></div>
-    <div class="text-wrapper">
-      <h1>Deepshika Mekala</h1>
-      <h2>All About Me</h2>
-    </div>
-    <a href="#about" class="scroll-arrow">↓</a>
-  </section>
+<!-- SLIDE 1 -->
+<section class="slide-intro checkerboard" id="intro">
+ <div class="center-blob"></div>
+ <div class="text-wrapper">
+  <h1>Deepshika Mekala</h1>
+  <h2>All About Me</h2>
+ </div>
+ <a href="#about" class="scroll-arrow">↓</a>
+</section>
 
-  <!-- Slide 2 (About Me on right) -->
-  <section class="slide-about checkerboard" id="about">
-    <div class="about-text">
-      <h2>Hi, I’m</h2>
-      <h1>Deepshika Mekala</h1>
-      <p>
-        A curious mind with a love for blending tech and creativity!  
-        I dive into AI, cloud, and SAP systems to build smart, intuitive  
-        solutions that make life easier. Whether it’s automating workflows,  
-        optimizing data, or experimenting with new ideas — I’m all about  
-        turning imagination into impact.
-      </p>
-    </div>
-    <div class="about-blob"></div>
-  </section>
+<!-- SLIDE 2 -->
+<section class="slide-about checkerboard" id="about">
+ <div class="about-text">
+  <h2>Hi, I’m</h2>
+  <h1>Deepshika Mekala</h1>
+  <p>
+   A curious mind with a love for blending tech and creativity! I dive into AI, cloud, and SAP systems to build smart, intuitive solutions that make life easier. Whether it’s automating workflows, optimizing data, or experimenting with new ideas — I’m all about turning imagination into impact.
+  </p>
+ </div>
+ <div class="about-blob"></div>
+</section>
 
-  <!-- Slide 3 (Education) -->
-  <section class="slide-edu checkerboard" id="education">
-    <h1 class="edu-title">Education</h1>
-    <div class="edu-content">
-      <div class="edu-card">
-        <h3>University of Calgary</h3>
-        <p>
-          Master of Engineering in Electrical and Computer Engineering<br/>
-          Calgary, AB<br/>2022 – 2024
-        </p>
-      </div>
-      <div class="edu-card">
-        <h3>Vasavi College of Engineering</h3>
-        <p>
-          Bachelor of Engineering in Electrical and Electronics Engineering<br/>
-          Hyderabad, India<br/>2017 – 2021
-        </p>
-      </div>
-    </div>
-  </section>
+<!-- SLIDE 3 (Education same layout as Experience) -->
+<section class="center-slide checkerboard" id="education">
+ <div class="center-blob-wrap"></div>
+ <div class="center-content">
+  <h1>Education</h1>
+  <p>University of Calgary | Master of Engineering in Electrical and Computer Engineering | Calgary, AB | 2022 – 2024</p>
+  <p>Vasavi College of Engineering | Bachelor of Engineering in Electrical and Electronics Engineering | Hyderabad, India | 2017 – 2021</p>
+ </div>
+</section>
+
+<!-- SLIDE 4 (Professional Experience) -->
+<section class="center-slide checkerboard" id="experience">
+ <div class="center-blob-wrap"></div>
+ <div class="center-content">
+  <h1>Professional Experience</h1>
+  <p>Associate SAP Developer – Cloud & AI | IBM | Canada | Oct 2024 – Present</p>
+  <p>Application Development Associate | Accenture | India | July 2021 – Aug 2022</p>
+  <p>Student Intern | Accenture | India | Dec 2020 – Jun 2021</p>
+  <p>Student Intern | Ordnance Factory Yeddumailaram | India | Jun 2019 – Sep 2019</p>
+ </div>
+</section>
 
 </body>
 </html>
