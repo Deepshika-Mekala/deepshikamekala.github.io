@@ -90,6 +90,86 @@
     <h1>Deepshika Mekala</h1>
     <h2>All About Me</h2>
   </div>
+<!-- ===== SLIDE 2 : ABOUT ME (NO PHOTO) ===== -->
+<section class="slide-about">
+  <div class="about-blob"></div>
+
+  <div class="about-text">
+    <h2>Hi, I’m</h2>
+    <h1>Deepshika Mekala</h1>
+    <p>
+      A curious mind with a love for blending tech and creativity! I dive into AI, cloud,
+      and SAP systems to build smart, intuitive solutions that actually make life easier.
+      Whether it’s automating workflows, optimizing data, or experimenting with new ideas,
+      I’m all about turning imagination into impact.
+    </p>
+  </div>
+</section>
+
+<style>
+  /* ---------- ABOUT ME SLIDE ---------- */
+  .slide-about {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+      linear-gradient(45deg, #C19A86 25%, transparent 25%),
+      linear-gradient(-45deg, #C19A86 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #C19A86 75%),
+      linear-gradient(-45deg, transparent 75%, #C19A86 75%);
+    background-size: 120px 120px;
+    background-position: 0 0, 0 60px, 60px -60px, -60px 0;
+    background-color: #E9DCD2;
+    overflow: hidden;
+  }
+
+  .about-blob {
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    background-color: #EBD9CA;
+    border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+    box-shadow: 12px 12px 0 #B9927E;
+    z-index: 1;
+  }
+
+  .about-text {
+    z-index: 2;
+    max-width: 700px;
+    color: #3B1D14;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .about-text h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8rem;
+    color: #A55B47;
+    margin-bottom: 0.4rem;
+  }
+
+  .about-text h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+    color: #3B1D14;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .about-text h1 { font-size: 2.3rem; }
+    .about-text h2 { font-size: 1.3rem; }
+    .about-text p { font-size: 1rem; }
+  }
+</style>
 
 </body>
 </html>
