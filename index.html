@@ -19,6 +19,7 @@
       position:relative;
       overflow:hidden;
     }
+
     .checkerboard {
       background-image:
         linear-gradient(45deg,#C19A86 25%,transparent 25%),
@@ -30,74 +31,163 @@
       background-color:#E9DCD2;
     }
 
-    /* SLIDE 1 */
+    /* Slide 1 */
     .slide-intro {
-      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
     }
     .center-blob {
-      position:absolute; width:600px; height:420px; background:#EBD9CA;
+      position:absolute;
+      width:600px;
+      height:420px;
+      background:#EBD9CA;
       border-radius:55% 45% 60% 40% / 55% 40% 60% 45%;
-      box-shadow:10px 10px 0 #B9927E; z-index:1;
+      box-shadow:10px 10px 0 #B9927E;
+      z-index:1;
     }
     .text-wrapper {
-      position:relative; z-index:2; color:#3B1D14; text-transform:uppercase;
+      position:relative;
+      z-index:2;
+      color:#3B1D14;
+      text-transform:uppercase;
     }
-    .text-wrapper h1 { font-size:3.8rem; text-shadow:3px 3px 0 #B9927E; letter-spacing:2px; }
-    .text-wrapper h2 { font-size:2rem; margin-top:1rem; text-shadow:2px 2px 0 #B9927E; }
+    .text-wrapper h1 {
+      font-size:3.8rem;
+      text-shadow:3px 3px 0 #B9927E;
+      letter-spacing:2px;
+    }
+    .text-wrapper h2 {
+      font-size:2rem;
+      margin-top:1rem;
+      text-shadow:2px 2px 0 #B9927E;
+      letter-spacing:1px;
+    }
     .scroll-arrow {
-      position:absolute; bottom:30px; left:50%; transform:translateX(-50%);
-      font-size:2rem; color:#3B1D14; text-decoration:none; animation:bounce 1.5s infinite; z-index:3;
+      position:absolute;
+      bottom:30px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:2rem;
+      color:#3B1D14;
+      text-decoration:none;
+      animation:bounce 1.5s infinite;
+      z-index:3;
     }
     @keyframes bounce {0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
 
-    /* SLIDE 2 (About Me Bubble on Right) */
-    .slide-about { padding:2rem 5%; }
-    .about-blob {
-      position:absolute; right:6%; top:50%; transform:translateY(-50%);
-      width:560px; height:560px; background:#F9E8DB; border-radius:50%;
-      box-shadow:12px 12px 0 #B9927E; display:flex; flex-direction:column;
-      align-items:center; justify-content:center; text-align:center;
-      padding:3rem; color:#3B1D14; font-family:'Poppins',sans-serif; z-index:1;
+    /* Slide 2 (About Me) */
+    .slide-about {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:5rem 2rem;
+      flex-direction:column;
     }
-    .about-blob h2 { font-family:'Luckiest Guy',cursive; font-size:1.6rem; color:#A55B47; margin-bottom:.3rem; }
-    .about-blob h1 { font-family:'Luckiest Guy',cursive; font-size:2.8rem; margin-bottom:1rem; }
-    .about-blob p { font-size:1.05rem; line-height:1.7; max-width:85%; }
 
-    /* SLIDE 3 (Education – Two Bubbles) */
+    .about-blob {
+      width:560px;
+      height:560px;
+      background:#F9E8DB;
+      border-radius:50%;
+      box-shadow:12px 12px 0 #B9927E;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:3rem;
+      color:#3B1D14;
+      font-family:'Poppins', sans-serif;
+      z-index:1;
+    }
+
+    .about-blob h2 {
+      font-family:'Luckiest Guy', cursive;
+      font-size:1.6rem;
+      color:#A55B47;
+      margin-bottom:.3rem;
+    }
+
+    .about-blob h1 {
+      font-family:'Luckiest Guy', cursive;
+      font-size:2.8rem;
+      margin-bottom:1rem;
+    }
+
+    .about-blob p {
+      font-size:1.05rem;
+      line-height:1.7;
+      max-width:85%;
+    }
+
+    /* Slide 3 (Education) */
     .slide-edu {
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      padding:3rem 2rem; text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:4rem 2rem;
+      text-align:center;
     }
+
     .edu-title {
-      font-family:'Luckiest Guy',cursive; color:#A55B47; font-size:2.5rem;
-      letter-spacing:2px; margin-bottom:3rem; text-shadow:2px 2px 0 #B9927E;
+      font-family:'Luckiest Guy', cursive;
+      color:#A55B47;
+      font-size:2.5rem;
+      letter-spacing:2px;
+      margin-bottom:3rem;
+      text-shadow:2px 2px 0 #B9927E;
     }
+
     .edu-content {
-      display:flex; justify-content:center; flex-wrap:wrap; gap:4rem; width:100%;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:4rem;
+      width:100%;
     }
+
     .edu-card {
-      position:relative; width:420px; height:420px;
-      background:#F9E8DB; border-radius:50%;
+      width:420px;
+      height:420px;
+      background:#F9E8DB;
+      border-radius:50%;
       box-shadow:10px 10px 0 #B9927E;
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      padding:2rem; color:#3B1D14;
-      font-family:'Poppins',sans-serif; text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+      color:#3B1D14;
+      font-family:'Poppins', sans-serif;
+      text-align:center;
     }
+
     .edu-card h3 {
-      font-family:'Luckiest Guy',cursive; font-size:1.7rem; color:#A55B47; margin-bottom:1rem;
+      font-family:'Luckiest Guy', cursive;
+      font-size:1.7rem;
+      color:#A55B47;
+      margin-bottom:1rem;
     }
+
     .edu-card p {
-      font-size:1rem; line-height:1.6;
+      font-size:1rem;
+      line-height:1.6;
     }
 
     /* Responsive */
     @media(max-width:900px){
       .center-blob{width:400px;height:300px;}
-      .text-wrapper h1{font-size:2.4rem;} .text-wrapper h2{font-size:1.4rem;}
-      .about-blob{position:relative; right:auto; top:auto; transform:none; width:90vw; height:auto; border-radius:40%; padding:2rem; margin:3rem auto;}
-      .about-blob h1{font-size:2rem;} .about-blob p{font-size:1rem;}
-      .edu-content{flex-direction:column; gap:2rem;}
-      .edu-card{width:80vw; height:auto; border-radius:40%; padding:2rem;}
+      .text-wrapper h1{font-size:2.4rem;}
+      .text-wrapper h2{font-size:1.4rem;}
+      .about-blob{width:90vw;height:auto;border-radius:40%;padding:2rem;margin:3rem auto;}
+      .about-blob h1{font-size:2rem;}
+      .about-blob p{font-size:1rem;}
+      .edu-content{flex-direction:column;gap:2rem;}
+      .edu-card{width:80vw;height:auto;border-radius:40%;padding:2rem;}
     }
   </style>
 </head>
