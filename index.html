@@ -1,160 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deepshika Mekala | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+<section class="slide-intro">
+  <div class="intro-card">
+    <h1 class="title">ALL ABOUT ME</h1>
+    <div class="name-circle">Deepshika Mekala</div>
+  </div>
+</section>
+
 <style>
-  * {margin:0; padding:0; box-sizing:border-box;}
-  html, body {
-    height:100%;
-    scroll-snap-type:y mandatory;
-    overflow-y:scroll;
-    scroll-behavior:smooth;
-    font-family:'Open Sans', sans-serif;
-  }
-  section {
-    height:100vh;
-    scroll-snap-align:start;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:2rem;
-    position:relative;
-    color:#333;
-    overflow:hidden;
-  }
-  h1,h2 {font-family:'Poppins',sans-serif;}
-  h1 {font-size:2.5rem;}
-  h2 {font-size:2rem;margin-bottom:1rem;}
-  p {max-width:750px;line-height:1.6;margin:0 auto;}
-  a {color:#333;text-decoration:none;font-weight:600;}
-  a:hover {text-decoration:underline;}
-
-  /* Pattern backgrounds */
-  .slide1 {
-    background-color:#ffb6c1;
+  .slide-intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFECEF;
     background-image:
-      radial-gradient(circle at 20px 20px, rgba(255,255,255,0.4) 3px, transparent 0),
-      radial-gradient(circle at 60px 60px, rgba(255,255,255,0.4) 3px, transparent 0);
-    background-size:80px 80px;
-    color:#fff;
+      radial-gradient(circle at 10% 20%, #FFD6E0 10%, transparent 11%),
+      radial-gradient(circle at 90% 80%, #FFDDE7 10%, transparent 11%),
+      radial-gradient(circle at 70% 10%, #FFE3E1 8%, transparent 9%),
+      radial-gradient(circle at 30% 90%, #FFF3F3 10%, transparent 11%);
+    background-size: 200px 200px;
+    color: #5B3A29;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: relative;
   }
-  .slide2 {
-    background-color:#fff3b0;
-    background-image:
-      repeating-linear-gradient(45deg, rgba(255,255,255,0.4) 0, rgba(255,255,255,0.4) 2px, transparent 2px, transparent 20px);
+  .title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #D46A6A;
+    margin-bottom: 2rem;
   }
-  .slide3 {
-    background-color:#a8dadc;
-    background-image:
-      radial-gradient(rgba(255,255,255,0.5) 2px, transparent 3px),
-      radial-gradient(rgba(255,255,255,0.5) 2px, transparent 3px);
-    background-size:60px 60px;
-    background-position:0 0,30px 30px;
+  .name-circle {
+    background: #FADADD;
+    padding: 1.5rem 3rem;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-  .slide4 {
-    background-color:#ff6f61;
-    background-image:
-      linear-gradient(135deg, rgba(255,255,255,0.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.3) 75%, transparent 75%, transparent);
-    background-size:40px 40px;
-    color:#fff;
-  }
-  .slide5 {
-    background-color:#f1faee;
-    background-image:
-      repeating-radial-gradient(circle, #ffe8ec 0, #ffe8ec 5px, transparent 5px, transparent 40px);
-  }
-
-  /* content cards for contrast */
-  .card {
-    background:rgba(255,255,255,0.85);
-    border-radius:15px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.1);
-    padding:2rem;
-    margin:1rem;
-    max-width:850px;
-    animation:fadeIn 1s ease;
-  }
-
-  @keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
-  }
-
-  .project {
-    background:#fff;
-    padding:1rem;
-    margin:.75rem 0;
-    border-radius:10px;
-    text-align:left;
-  }
-  .project h3 {color:#ff6f61;}
-  .footer {margin-top:1rem;font-size:.9rem;color:#555;}
 </style>
-</head>
-<body>
-
-<section class="slide1">
-  <div class="card">
-    <h1>Deepshika Mekala</h1>
-    <h2>SAP Developer | AI & Cloud Enthusiast</h2>
-    <p>Associate SAP Developer at IBM Canada, working across <b>SAP S/4HANA</b>,
-       <b>Azure AI</b>, and automation. Focused on building intelligent, data-driven ERP solutions.</p>
-  </div>
-</section>
-
-<section class="slide2">
-  <div class="card">
-    <h2>Technical Skills</h2>
-    <p><b>Languages:</b> Python, Java, C++, SQL, JavaScript<br>
-       <b>AI & Cloud:</b> Azure AI, TensorFlow, LangChain, RAG Concepts<br>
-       <b>SAP:</b> EWM, ABAP, BTP, Power Platform<br>
-       <b>Tools:</b> Power BI, Git, Jenkins, AWS</p>
-  </div>
-</section>
-
-<section class="slide3">
-  <div class="card">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>🧠 SAP AI Copilot</h3>
-      <p>Python + LangChain assistant answering SAP workflow queries with RAG and FAISS search.</p>
-    </div>
-    <div class="project">
-      <h3>☁️ Azure Data Pipeline</h3>
-      <p>Automated ETL data flow using Python and Azure Blob for live reporting.</p>
-    </div>
-    <div class="project">
-      <h3>📊 Power BI Retail Dashboard</h3>
-      <p>Interactive visualization of supply-chain and sales KPIs for retailers.</p>
-    </div>
-  </div>
-</section>
-
-<section class="slide4">
-  <div class="card">
-    <h2>Certifications</h2>
-    <p>SAP Certified: Extended Warehouse Management (EWM)<br>
-       SAP Certified: Generative AI Development<br>
-       Microsoft Azure Data & AI Fundamentals<br>
-       AWS Cloud Practitioner Essentials<br>
-       IBM Enterprise Design Thinking Practitioner</p>
-  </div>
-</section>
-
-<section class="slide5">
-  <div class="card">
-    <h2>Contact</h2>
-    <p>📧 <a href="mailto:deepshikashalini@gmail.com">deepshikashalini@gmail.com</a><br>
-       🔗 <a href="https://linkedin.com/in/deepshikamekala" target="_blank">LinkedIn</a> |
-       <a href="https://github.com/deepshikamekala" target="_blank">GitHub</a></p>
-    <div class="footer">© 2025 Deepshika Mekala · Built with 💖 using GitHub Pages</div>
-  </div>
-</section>
-
-</body>
-</html>
