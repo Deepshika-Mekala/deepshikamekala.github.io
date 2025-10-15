@@ -27,17 +27,18 @@
 
     /* ---------- COMMON STYLES ---------- */
     section {
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       text-align: center;
+      padding: 2rem;
+      overflow: hidden;
     }
 
-    /* ---------- SLIDE 1 ---------- */
-    .slide-intro {
+    .checkerboard {
       background-image:
         linear-gradient(45deg, #C19A86 25%, transparent 25%),
         linear-gradient(-45deg, #C19A86 25%, transparent 25%),
@@ -48,7 +49,8 @@
       background-color: #E9DCD2;
     }
 
-    .center-blob {
+    /* ---------- SLIDE 1 ---------- */
+    .slide-intro .center-blob {
       position: absolute;
       width: 600px;
       height: 420px;
@@ -79,24 +81,7 @@
     }
 
     /* ---------- SLIDE 2 ---------- */
-    .slide-about {
-      background-image:
-        linear-gradient(45deg, #C19A86 25%, transparent 25%),
-        linear-gradient(-45deg, #C19A86 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #C19A86 75%),
-        linear-gradient(-45deg, transparent 75%, #C19A86 75%);
-      background-size: 120px 120px;
-      background-position: 0 0, 0 60px, 60px -60px, -60px 0;
-      background-color: #E9DCD2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .about-blob {
+    .slide-about .about-blob {
       position: absolute;
       width: 70%;
       height: 80%;
@@ -111,8 +96,8 @@
       max-width: 700px;
       color: #3B1D14;
       font-family: 'Poppins', sans-serif;
+      text-align: center;
       padding: 2rem;
-      background: transparent;
     }
 
     .about-text h2 {
@@ -134,16 +119,6 @@
       line-height: 1.7;
     }
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 700px) {
-      .text-wrapper h1 { font-size: 2.4rem; }
-      .text-wrapper h2 { font-size: 1.4rem; }
-      .center-blob { width: 400px; height: 300px; }
-      .about-text h1 { font-size: 2.3rem; }
-      .about-text h2 { font-size: 1.3rem; }
-      .about-text p { font-size: 1rem; }
-    }
-
     /* ---------- SCROLL ARROW ---------- */
     .scroll-arrow {
       position: absolute;
@@ -154,18 +129,29 @@
       color: #3B1D14;
       text-decoration: none;
       animation: bounce 1.5s infinite;
+      z-index: 3;
     }
 
     @keyframes bounce {
       0%, 100% { transform: translate(-50%, 0); }
       50% { transform: translate(-50%, 10px); }
     }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 700px) {
+      .text-wrapper h1 { font-size: 2.4rem; }
+      .text-wrapper h2 { font-size: 1.4rem; }
+      .slide-intro .center-blob { width: 400px; height: 300px; }
+      .about-text h1 { font-size: 2.3rem; }
+      .about-text h2 { font-size: 1.3rem; }
+      .about-text p { font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
 
   <!-- SLIDE 1 -->
-  <section class="slide-intro" id="intro">
+  <section class="slide-intro checkerboard" id="intro">
     <div class="center-blob"></div>
     <div class="text-wrapper">
       <h1>Deepshika Mekala</h1>
@@ -175,7 +161,7 @@
   </section>
 
   <!-- SLIDE 2 -->
-  <section class="slide-about" id="about">
+  <section class="slide-about checkerboard" id="about">
     <div class="about-blob"></div>
     <div class="about-text">
       <h2>Hi, I’m</h2>
