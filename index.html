@@ -6,104 +6,154 @@
 <title>Deepshika Mekala | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 <style>
-  * {box-sizing: border-box; margin:0; padding:0;}
+  * {margin:0; padding:0; box-sizing:border-box;}
   html, body {
-    height: 100%;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    font-family: 'Open Sans', sans-serif;
+    height:100%;
+    scroll-snap-type:y mandatory;
+    overflow-y:scroll;
+    scroll-behavior:smooth;
+    font-family:'Open Sans', sans-serif;
   }
   section {
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    color: #333;
-  }
-
-  /* Slide Colors */
-  .slide1 { background: #FFB6C1; color:#fff; }
-  .slide2 { background: #FFF3B0; }
-  .slide3 { background: #A8DADC; }
-  .slide4 { background: #FF6F61; color:#fff;}
-  .slide5 { background: #F1FAEE; }
-
-  h1, h2 { font-family: 'Poppins', sans-serif; margin-bottom: 1rem; }
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  p { max-width: 700px; line-height: 1.6; margin: 0 auto; }
-
-  .highlight {
-    background: #fff;
+    height:100vh;
+    scroll-snap-align:start;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:2rem;
+    position:relative;
     color:#333;
-    padding: 0.3rem 0.7rem;
-    border-radius: 5px;
+    overflow:hidden;
   }
-
-  .projects {max-width:800px;margin-top:1rem;text-align:left;}
-  .project {background:#fff;color:#333;padding:1rem;border-radius:12px;margin:1rem 0;}
-  .project h3{color:#FF6F61;margin-bottom:.4rem;}
+  h1,h2 {font-family:'Poppins',sans-serif;}
+  h1 {font-size:2.5rem;}
+  h2 {font-size:2rem;margin-bottom:1rem;}
+  p {max-width:750px;line-height:1.6;margin:0 auto;}
   a {color:#333;text-decoration:none;font-weight:600;}
   a:hover {text-decoration:underline;}
+
+  /* Pattern backgrounds */
+  .slide1 {
+    background-color:#ffb6c1;
+    background-image:
+      radial-gradient(circle at 20px 20px, rgba(255,255,255,0.4) 3px, transparent 0),
+      radial-gradient(circle at 60px 60px, rgba(255,255,255,0.4) 3px, transparent 0);
+    background-size:80px 80px;
+    color:#fff;
+  }
+  .slide2 {
+    background-color:#fff3b0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.4) 0, rgba(255,255,255,0.4) 2px, transparent 2px, transparent 20px);
+  }
+  .slide3 {
+    background-color:#a8dadc;
+    background-image:
+      radial-gradient(rgba(255,255,255,0.5) 2px, transparent 3px),
+      radial-gradient(rgba(255,255,255,0.5) 2px, transparent 3px);
+    background-size:60px 60px;
+    background-position:0 0,30px 30px;
+  }
+  .slide4 {
+    background-color:#ff6f61;
+    background-image:
+      linear-gradient(135deg, rgba(255,255,255,0.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.3) 75%, transparent 75%, transparent);
+    background-size:40px 40px;
+    color:#fff;
+  }
+  .slide5 {
+    background-color:#f1faee;
+    background-image:
+      repeating-radial-gradient(circle, #ffe8ec 0, #ffe8ec 5px, transparent 5px, transparent 40px);
+  }
+
+  /* content cards for contrast */
+  .card {
+    background:rgba(255,255,255,0.85);
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    padding:2rem;
+    margin:1rem;
+    max-width:850px;
+    animation:fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+  }
+
+  .project {
+    background:#fff;
+    padding:1rem;
+    margin:.75rem 0;
+    border-radius:10px;
+    text-align:left;
+  }
+  .project h3 {color:#ff6f61;}
+  .footer {margin-top:1rem;font-size:.9rem;color:#555;}
 </style>
 </head>
 <body>
 
-<section class="slide1" id="about">
-  <h1>Deepshika Mekala</h1>
-  <h2>Associate SAP Developer | IBM Canada</h2>
-  <p>Passionate about <span class="highlight">SAP S/4HANA, AI Integration, and Cloud Technologies</span>.
-     I combine enterprise systems knowledge with AI and analytics to create intelligent workflows.</p>
+<section class="slide1">
+  <div class="card">
+    <h1>Deepshika Mekala</h1>
+    <h2>SAP Developer | AI & Cloud Enthusiast</h2>
+    <p>Associate SAP Developer at IBM Canada, working across <b>SAP S/4HANA</b>,
+       <b>Azure AI</b>, and automation. Focused on building intelligent, data-driven ERP solutions.</p>
+  </div>
 </section>
 
-<section class="slide2" id="skills">
-  <h2>Technical Skills</h2>
-  <p><b>Languages:</b> Python, Java, C++, SQL, JavaScript<br>
-     <b>AI & Cloud:</b> Azure AI, TensorFlow, LangChain, RAG Concepts<br>
-     <b>SAP:</b> EWM, ABAP, BTP, Power Platform<br>
-     <b>Tools:</b> Power BI, Git, Jenkins, AWS</p>
+<section class="slide2">
+  <div class="card">
+    <h2>Technical Skills</h2>
+    <p><b>Languages:</b> Python, Java, C++, SQL, JavaScript<br>
+       <b>AI & Cloud:</b> Azure AI, TensorFlow, LangChain, RAG Concepts<br>
+       <b>SAP:</b> EWM, ABAP, BTP, Power Platform<br>
+       <b>Tools:</b> Power BI, Git, Jenkins, AWS</p>
+  </div>
 </section>
 
-<section class="slide3" id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
+<section class="slide3">
+  <div class="card">
+    <h2>Projects</h2>
     <div class="project">
       <h3>🧠 SAP AI Copilot</h3>
-      <p>Built a chatbot using Python + LangChain to answer SAP workflow queries with RAG and FAISS.</p>
+      <p>Python + LangChain assistant answering SAP workflow queries with RAG and FAISS search.</p>
     </div>
     <div class="project">
       <h3>☁️ Azure Data Pipeline</h3>
-      <p>Automated ETL pipeline with Python & Azure Blob for seamless reporting workflows.</p>
+      <p>Automated ETL data flow using Python and Azure Blob for live reporting.</p>
     </div>
     <div class="project">
-      <h3>📊 Power BI Dashboard</h3>
-      <p>Created interactive KPIs to visualize sales and logistics data from retail operations.</p>
+      <h3>📊 Power BI Retail Dashboard</h3>
+      <p>Interactive visualization of supply-chain and sales KPIs for retailers.</p>
     </div>
   </div>
 </section>
 
-<section class="slide4" id="certifications">
-  <h2>Certifications</h2>
-  <p>
-    SAP Certified: Extended Warehouse Management (EWM)<br>
-    SAP Certified: Generative AI Development<br>
-    Microsoft Azure AI & Data Fundamentals<br>
-    AWS Cloud Practitioner Essentials<br>
-    IBM Enterprise Design Thinking Practitioner
-  </p>
+<section class="slide4">
+  <div class="card">
+    <h2>Certifications</h2>
+    <p>SAP Certified: Extended Warehouse Management (EWM)<br>
+       SAP Certified: Generative AI Development<br>
+       Microsoft Azure Data & AI Fundamentals<br>
+       AWS Cloud Practitioner Essentials<br>
+       IBM Enterprise Design Thinking Practitioner</p>
+  </div>
 </section>
 
-<section class="slide5" id="contact">
-  <h2>Contact</h2>
-  <p>📧 <a href="mailto:deepshikashalini@gmail.com">deepshikashalini@gmail.com</a><br>
-     🔗 <a href="https://linkedin.com/in/deepshikamekala" target="_blank">LinkedIn</a> |
-     <a href="https://github.com/deepshikamekala" target="_blank">GitHub</a></p>
-  <p style="margin-top:2rem;font-size:0.9rem;">© 2025 Deepshika Mekala · Built with 💖 using GitHub Pages</p>
+<section class="slide5">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:deepshikashalini@gmail.com">deepshikashalini@gmail.com</a><br>
+       🔗 <a href="https://linkedin.com/in/deepshikamekala" target="_blank">LinkedIn</a> |
+       <a href="https://github.com/deepshikamekala" target="_blank">GitHub</a></p>
+    <div class="footer">© 2025 Deepshika Mekala · Built with 💖 using GitHub Pages</div>
+  </div>
 </section>
 
 </body>
