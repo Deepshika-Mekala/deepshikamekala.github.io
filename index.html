@@ -29,9 +29,6 @@
     section {
       min-height: 100vh;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       position: relative;
       overflow: hidden;
     }
@@ -48,7 +45,15 @@
     }
 
     /* ---------- SLIDE 1 ---------- */
-    .slide-intro .center-blob {
+    .slide-intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .center-blob {
       position: absolute;
       width: 600px;
       height: 420px;
@@ -61,7 +66,6 @@
     .text-wrapper {
       position: relative;
       z-index: 2;
-      text-align: center;
       color: #3b1d14;
       text-transform: uppercase;
     }
@@ -96,40 +100,38 @@
       50% { transform: translate(-50%, 10px); }
     }
 
-    /* ---------- SLIDE 2 (SIDE LAYOUT) ---------- */
+    /* ---------- SLIDE 2 (RIGHT SIDE) ---------- */
     .slide-about {
-      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       padding: 4rem 8%;
-    }
-
-    .about-blob {
-      position: absolute;
-      left: 5%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 45%;
-      height: 70%;
-      background-color: #ebd9ca;
-      border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
-      box-shadow: 12px 12px 0 #b9927e;
-      z-index: 1;
+      position: relative;
     }
 
     .about-content {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      width: 100%;
+      justify-content: flex-end;
+      gap: 3rem;
       z-index: 2;
     }
 
+    .about-blob {
+      width: 380px;
+      height: 380px;
+      background-color: #ebd9ca;
+      border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+      box-shadow: 12px 12px 0 #b9927e;
+      z-index: 1;
+      flex-shrink: 0;
+    }
+
     .about-text {
-      flex: 1;
-      margin-left: auto;
       max-width: 500px;
       color: #3b1d14;
       font-family: "Poppins", sans-serif;
-      text-align: left;
+      text-align: right;
       z-index: 2;
     }
 
@@ -156,32 +158,29 @@
     @media (max-width: 900px) {
       .text-wrapper h1 { font-size: 2.4rem; }
       .text-wrapper h2 { font-size: 1.4rem; }
-      .slide-intro .center-blob { width: 400px; height: 300px; }
+      .center-blob { width: 400px; height: 300px; }
 
       .slide-about {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding: 2rem;
       }
 
-      .about-blob {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        width: 80%;
-        height: 40%;
-        margin-bottom: 2rem;
+      .about-content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
       }
 
-      .about-content {
-        flex-direction: column;
-        text-align: center;
+      .about-blob {
+        width: 280px;
+        height: 280px;
       }
 
       .about-text {
         text-align: center;
-        margin-left: 0;
         max-width: 90%;
       }
 
@@ -205,7 +204,6 @@
 
   <!-- SLIDE 2 -->
   <section class="slide-about checkerboard" id="about">
-    <div class="about-blob"></div>
     <div class="about-content">
       <div class="about-text">
         <h2>Hi, I’m</h2>
@@ -217,6 +215,7 @@
           I’m all about turning imagination into impact.
         </p>
       </div>
+      <div class="about-blob"></div>
     </div>
   </section>
 
