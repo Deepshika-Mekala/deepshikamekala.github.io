@@ -43,7 +43,20 @@ section.in-view{opacity:1;transform:translateY(0);}
 @keyframes typewriter{to{width:100%}}
 @keyframes blinkCursor{50%{border-color:transparent}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.scroll-arrow{position:absolute;bottom:35px;left:50%;font-size:2.2rem;color:var(--text-dark);text-decoration:none;z-index:5;opacity:0;animation:bounce 1.6s ease-in-out infinite,fadeUp .6s ease 2.6s forwards;}
+.scroll-arrow{
+  position:absolute;
+  bottom:35px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2.2rem;
+  color:var(--text-dark);
+  text-decoration:none;
+  z-index:5;
+  opacity:0;
+  animation:bounce 1.6s ease-in-out infinite,fadeUp .6s ease 2.6s forwards;
+}
+
+So the 3 fix
 @keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 .social-links{
   position:absolute;
@@ -171,49 +184,30 @@ section.in-view .entry:nth-child(2){transition-delay:.1s}section.in-view .entry:
 
 
 
-<!-- INTRO -->
-<section id="intro" class="checkerboard">
+<section id="intro" class="slide-intro checkerboard">
 
-<div class="center-blob"></div>
+  <div class="center-blob"></div>
 
-<div class="text-wrapper">
+  <div class="text-wrapper">
+    <h1>Deepshika Mekala</h1>
+    <h2>Built with curiosity ✦</h2>
+  </div>
 
-<h1>Deepshika Mekala</h1>
+  <div class="social-links">
+    <a href="mailto:deepshikashalini@gmail.com">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
 
-<h2>Built with curiosity ✦</h2>
+    <a href="https://www.linkedin.com/in/deepshikamekala/" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
 
-</div>
+    <a href="https://github.com/Deepshika-Mekala" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
+  </div>
 
-<div class="social-links">
-
-<a href="mailto:deepshikashalini@gmail.com">
-
-<i class="fa-solid fa-envelope"></i>
-Email
-
-</a>
-
-<a href="https://www.linkedin.com/in/deepshikamekala/" target="_blank">
-
-<i class="fa-brands fa-linkedin"></i>
-LinkedIn
-
-</a>
-
-<a href="https://github.com/Deepshika-Mekala" target="_blank">
-
-<i class="fa-brands fa-github"></i>
-GitHub
-
-</a>
-
-</div>
-
-<a href="#about" class="scroll-arrow">
-
-↓
-
-</a>
+  <a href="#about" class="scroll-arrow">↓</a>
 
 </section>
 
