@@ -42,60 +42,7 @@ section.in-view{opacity:1;transform:translateY(0);}
 .scroll-arrow{position:absolute;bottom:200px;left:50%;font-size:2.2rem;color:var(--text-dark);text-decoration:none;z-index:5;opacity:0;animation:bounce 1.6s ease-in-out infinite,fadeUp .6s ease 2.6s forwards;}
 @keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
-/* ═══════════════════════
-   PEEK CATS
-═══════════════════════ */
-#peek-cats {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  padding: 0;
-  pointer-events: none;
-}
 
-.peek-cat {
-  transform: translateY(100%);
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.peek-cat img {
-  width: clamp(60px, 9vw, 120px);
-  display: block;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
-}
-
-/* individual tilts */
-.pc1 img { transform: rotate(-10deg); }
-.pc2 img { transform: rotate(-4deg); }
-.pc3 img { transform: rotate(0deg); }
-.pc4 img { transform: rotate(5deg); }
-.pc5 img { transform: rotate(11deg); }
-
-@keyframes peekRise {
-  0%   { transform: translateY(100%); }
-  100% { transform: translateY(10%); }
-}
-@keyframes floatA { 0%,100%{ transform:translateY(10%)} 50%{transform:translateY(3%)} }
-@keyframes floatB { 0%,100%{ transform:translateY(10%)} 50%{transform:translateY(2%)} }
-@keyframes floatC { 0%,100%{ transform:translateY(10%)} 50%{transform:translateY(4%)} }
-@keyframes floatD { 0%,100%{ transform:translateY(10%)} 50%{transform:translateY(1%)} }
-@keyframes floatE { 0%,100%{ transform:translateY(10%)} 50%{transform:translateY(5%)} }
-
-.pc1{ animation: peekRise .8s cubic-bezier(.34,1.5,.64,1) 2.8s forwards, floatA 3.5s ease-in-out 3.7s infinite; }
-.pc2{ animation: peekRise .8s cubic-bezier(.34,1.5,.64,1) 3.1s forwards, floatB 4.2s ease-in-out 4.0s infinite; }
-.pc3{ animation: peekRise .8s cubic-bezier(.34,1.5,.64,1) 3.4s forwards, floatC 3.8s ease-in-out 4.3s infinite; }
-.pc4{ animation: peekRise .8s cubic-bezier(.34,1.5,.64,1) 3.7s forwards, floatD 4.5s ease-in-out 4.6s infinite; }
-.pc5{ animation: peekRise .8s cubic-bezier(.34,1.5,.64,1) 4.0s forwards, floatE 3.9s ease-in-out 4.9s infinite; }
-
-#peek-cats.hidden { display: none; }
 
 /* ── rest of page ── */
 .slide-about{display:flex;align-items:center;justify-content:space-between;padding:0 3vw;}
