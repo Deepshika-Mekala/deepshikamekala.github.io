@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Deepshika Mekala | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root{--bg:#E9DCD2;--checker:#C19A86;--blob-bg:#F9E8DB;--blob-shadow:#B9927E;--text-dark:#3B1D14;--text-accent:#A55B47;--nav-bg:rgba(233,220,210,0.85);--card-bg:#F9E8DB;}
 [data-theme="dark"]{--bg:#1a1008;--checker:#2e1c0e;--blob-bg:#2a160c;--blob-shadow:#6b3d28;--text-dark:#f0ddd0;--text-accent:#e8956d;--nav-bg:rgba(26,16,8,0.90);--card-bg:#2a160c;}
@@ -42,9 +43,40 @@ section.in-view{opacity:1;transform:translateY(0);}
 @keyframes typewriter{to{width:100%}}
 @keyframes blinkCursor{50%{border-color:transparent}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.scroll-arrow{position:absolute;bottom:200px;left:50%;font-size:2.2rem;color:var(--text-dark);text-decoration:none;z-index:5;opacity:0;animation:bounce 1.6s ease-in-out infinite,fadeUp .6s ease 2.6s forwards;}
+.scroll-arrow{position:absolute;bottom:35px;left:50%;font-size:2.2rem;color:var(--text-dark);text-decoration:none;z-index:5;opacity:0;animation:bounce 1.6s ease-in-out infinite,fadeUp .6s ease 2.6s forwards;}
 @keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+.social-links{
+  position:absolute;
+  left:50%;
+  bottom:95px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  align-items:center;
+  z-index:6;
+}
 
+.social-links a{
+  font-family:'Poppins',sans-serif;
+  text-decoration:none;
+  color:var(--text-dark);
+  border:2px solid var(--text-accent);
+  background:rgba(249,232,219,0.92);
+  padding:10px 18px;
+  border-radius:30px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:all .25s;
+}
+
+.social-links a:hover{
+  background:var(--text-accent);
+  color:white;
+  transform:translateY(-3px);
+}
 
 
 /* ── rest of page ── */
