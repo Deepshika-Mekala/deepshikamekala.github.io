@@ -110,38 +110,6 @@ section.in-view .entry:nth-child(2){transition-delay:.1s}section.in-view .entry:
 .dot.active{background:var(--text-accent);border-color:var(--text-accent);transform:scale(1.45);}
 @media(max-width:768px){.slide-about{flex-direction:column;padding:3rem 1.5rem;gap:2rem;}.about-photo-blob{width:220px;height:280px;}.center-blob{width:300px;height:220px}.text-wrapper h1{font-size:1.8rem}.text-wrapper h2{font-size:1.1rem}.about-blob{padding:2rem;width:90vw;aspect-ratio:auto;border-radius:30px;}.card,.contact-card{padding:2.5rem 1.5rem;border-radius:40%}nav{padding:.7rem 1.2rem}.nav-links a{font-size:.8rem;padding:.3rem .6rem}#peek-cats{padding:0 1vw;}}
 
-/* ── CAT SLIDE LAYOUT ── */
-.cat-slide{display:flex;align-items:center;justify-content:space-between;padding:0 5vw;min-height:100vh;}
-.cat-slide .card{max-width:600px;width:min(55vw,600px);flex-shrink:0;}
-.slide-cat{
-  flex-shrink:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:min(320px,30vw);
-}
-.slide-cat svg{ filter:drop-shadow(4px 8px 12px rgba(0,0,0,0.18)); }
-
-/* cat idle animations */
-@keyframes catWiggle{ 0%,100%{transform:rotate(-4deg) translateY(0)} 50%{transform:rotate(4deg) translateY(-12px)} }
-@keyframes catWiggle2{ 0%,100%{transform:rotate(5deg) translateY(0)} 50%{transform:rotate(-3deg) translateY(-10px)} }
-@keyframes catWiggle3{ 0%,100%{transform:rotate(-3deg) translateY(0)} 50%{transform:rotate(5deg) translateY(-14px)} }
-@keyframes tailSlide1{ 0%,100%{transform:rotate(-18deg)} 50%{transform:rotate(20deg)} }
-@keyframes tailSlide2{ 0%,100%{transform:rotate(18deg)}  50%{transform:rotate(-20deg)} }
-@keyframes butterflyFlap{ 0%,100%{transform:scaleX(1)} 50%{transform:scaleX(0.4)} }
-
-.slide-cat-img {
-  flex-shrink: 0;
-  width: min(460px, 42vw);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slide-cat-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
 }
 </style>
 </head>
