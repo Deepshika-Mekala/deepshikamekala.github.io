@@ -28,7 +28,10 @@ nav.visible{transform:translateY(0);}
 /* sections — overflow hidden EXCEPT intro */
 section{min-height:100vh;width:100%;position:relative;overflow:hidden;opacity:0;transform:translateY(40px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1);z-index:1;}
 section.in-view{opacity:1;transform:translateY(0);}
-#intro{overflow:visible;}  /* cats need to overflow bottom */
+#intro{
+  overflow:visible;
+  position:relative;
+}
 
 .slide-intro{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 .center-blob{position:absolute;width:580px;height:400px;background:var(--blob-bg);border-radius:55% 45% 60% 40%/55% 40% 60% 45%;box-shadow:12px 12px 0 var(--blob-shadow);z-index:1;animation:blobPulse 6s ease-in-out infinite;}
@@ -108,7 +111,7 @@ section.in-view .entry:nth-child(2){transition-delay:.1s}section.in-view .entry:
 #nav-dots{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:900;}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--blob-shadow);border:2px solid transparent;transition:background .3s,transform .3s;cursor:none;}
 .dot.active{background:var(--text-accent);border-color:var(--text-accent);transform:scale(1.45);}
-@media(max-width:768px){.slide-about{flex-direction:column;padding:3rem 1.5rem;gap:2rem;}.about-photo-blob{width:220px;height:280px;}.center-blob{width:300px;height:220px}.text-wrapper h1{font-size:1.8rem}.text-wrapper h2{font-size:1.1rem}.about-blob{padding:2rem;width:90vw;aspect-ratio:auto;border-radius:30px;}.card,.contact-card{padding:2.5rem 1.5rem;border-radius:40%}nav{padding:.7rem 1.2rem}.nav-links a{font-size:.8rem;padding:.3rem .6rem}#peek-cats{padding:0 1vw;}}
+@media(max-width:768px){.slide-about{flex-direction:column;padding:3rem 1.5rem;gap:2rem;}.about-photo-blob{width:220px;height:280px;}.center-blob{width:300px;height:220px}.text-wrapper h1{font-size:1.8rem}.text-wrapper h2{font-size:1.1rem}.about-blob{padding:2rem;width:90vw;aspect-ratio:auto;border-radius:30px;}.card,.contact-card{padding:2.5rem 1.5rem;border-radius:40%}nav{padding:.7rem 1.2rem}.nav-links a{font-size:.8rem;padding:.3rem .6rem}}
 
 }
 </style>
